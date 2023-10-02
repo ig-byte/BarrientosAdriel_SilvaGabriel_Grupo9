@@ -25,19 +25,19 @@ public class Main {
         /*
          * Prueba de tostring clases
          */
-        Pasajero p1 = new Pasajero(null, 0, 0, false);
-        Asiento a1 = new Asiento(false);
+        Pasajero p1 = new Pasajero("asd", 186616510, 123456789, true);
+        Asiento a1 = new Asiento(p1, false);
 
         Avion v1 = new Avion();
-
+        v1.poblarAvion();
         System.out.println(v1.toString());
 
-        System.out.println();
         int opcion;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         /*
          * Menu
+         * 
          */
         do {
             System.out.println("Menu");
@@ -55,6 +55,15 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Compra de asiento");
+
+                    v1.mostrarAsientos();
+                    /*
+                     * - Asientos
+                     * - Condicion para avisar que el asiento este disponible
+                     * - Pedir datos del pasajero
+                     * - Revisar si es VIP
+                     * - Publicar valor de pasaje y descuento si aplica
+                     */
                     break;
                 case 3:
                     int vueloAnulado;
