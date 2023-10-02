@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 
+import java.util.Scanner;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  *
  * @author gsilva
@@ -11,17 +17,47 @@ public class Main {
 
     /**
      * @param args the command line arguments
+     * @throws IOException
+     * @throws NumberFormatException
      */
-    public static void main(String[] args) {
-        System.out.println("Hola mundo !!!");
-        System.out.println("asda");
-        System.out.println("Holaa, intento 2");
-        System.out.println();
+    public static void main(String[] args) throws NumberFormatException, IOException {
 
+        /*
+         * Prueba de tostring clases
+         */
         Pasajero p1 = new Pasajero(null, 0, 0, false);
+        Asiento a1 = new Asiento(false);
 
-        System.out.println(p1.toString());
-        // TODO code application logic here
+        System.out.println();
+        int opcion;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        /*
+         * Menu
+         */
+        do {
+            System.out.println("Menu");
+            System.out.println("1. Ver Asientos disponibles");
+            System.out.println("2. Comprar Asiento");
+            System.out.println("3. Anular Vuelo");
+            System.out.println("4. Salir");
+            System.out.println("- Seleccione una opcion:");
+
+            opcion = Integer.parseInt(br.readLine());
+
+            switch (opcion) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    break;
+            }
+        } while (opcion != 4);
 
         /*
          * Generar menu con
@@ -41,15 +77,15 @@ public class Main {
          */
         /*
          * Formato de Array de asientos
-         * |  1   2   3    4   5   6   |
-         * |  7   8   9    10  11  12  |
-         * |  13  14  15   16  17  18  |
-         * |  19  20  21   22  23  24  |
-         * |  25  26  27   28  29  30  |
+         * | 1 2 3 4 5 6 |
+         * | 7 8 9 10 11 12 |
+         * | 13 14 15 16 17 18 |
+         * | 19 20 21 22 23 24 |
+         * | 25 26 27 28 29 30 |
          * |_____________ _____________|
          * |_____________ _____________|
-         * |  31  32  33   34  35  36  |
-         * |  37  38  39   40  41  42  |
+         * | 31 32 33 34 35 36 |
+         * | 37 38 39 40 41 42 |
          */
     }
 
