@@ -27,4 +27,8 @@ public class Asiento {
         return "Asiento{" + "pasajero=" + pasajero + ", vip=" + vip + '}';
     }
     
+    public boolean isEmpty() {
+        return pasajero == null;
+    }
+    
 }
