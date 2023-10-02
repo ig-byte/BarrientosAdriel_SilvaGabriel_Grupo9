@@ -53,7 +53,11 @@ public class Main {
                     System.out.println("Compra de asiento");
                     break;
                 case 3:
+                    int vueloAnulado;
                     System.out.println("Anulación de vuelo");
+                    System.out.print("Ingrese el vuelo a anular: ");
+                    vueloAnulado = Integer.parseInt(br.readLine());
+                    v1.anularVuelo(vueloAnulado);
                     break;
                 case 4:
                     System.out.println("Salir");
