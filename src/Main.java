@@ -51,12 +51,18 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Asientos disponibles");
+                    v1.mostrarAsientos();
                     break;
                 case 2:
+                    int vuelo;
                     System.out.println("Compra de asiento");
 
                     v1.mostrarAsientos();
+                    
+                    System.out.print("Ingrese el vuelo a comprar: ");
+                    vuelo = Integer.parseInt(br.readLine());
+                    v1.comprarPasaje(vuelo);
+                    
                     /*
                      * - Asientos
                      * - Condicion para avisar que el asiento este disponible
