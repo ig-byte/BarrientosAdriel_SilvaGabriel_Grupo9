@@ -28,6 +28,10 @@ public class Main {
         Pasajero p1 = new Pasajero(null, 0, 0, false);
         Asiento a1 = new Asiento(false);
 
+        Avion v1 = new Avion();
+
+        System.out.println(v1.toString());
+
         System.out.println();
         int opcion;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
