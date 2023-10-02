@@ -1,6 +1,5 @@
 public class Pasajero {
-    String nombrePasajero;
-    int rutPasajero;
+    String nombrePasajero, rutPasajero;
     int telefonoPasajero;
     boolean vip;
 
@@ -12,11 +11,11 @@ public class Pasajero {
         this.nombrePasajero = nombrePasajero;
     }
 
-    public int getRutPasajero() {
+    public String getRutPasajero() {
         return rutPasajero;
     }
 
-    public void setRutPasajero(int rutPasajero) {
+    public void setRutPasajero(String rutPasajero) {
         this.rutPasajero = rutPasajero;
     }
 
@@ -36,7 +35,7 @@ public class Pasajero {
         this.vip = vip;
     }
 
-    public Pasajero(String nombrePasajero, int rutPasajero, int telefonoPasajero, boolean vip) {
+    public Pasajero(String nombrePasajero, String rutPasajero, int telefonoPasajero, boolean vip) {
         this.nombrePasajero = nombrePasajero;
         this.rutPasajero = rutPasajero;
         this.telefonoPasajero = telefonoPasajero;
