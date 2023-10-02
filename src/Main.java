@@ -47,14 +47,19 @@ public class Main {
 
             switch (opcion) {
                 case 1:
+                    System.out.println("Asientos disponibles");
                     break;
                 case 2:
+                    System.out.println("Compra de asiento");
                     break;
                 case 3:
+                    System.out.println("Anulación de vuelo");
                     break;
                 case 4:
+                    System.out.println("Salir");
                     break;
                 default:
+                    System.out.println("Opcion Invalida !");
                     break;
             }
         } while (opcion != 4);
