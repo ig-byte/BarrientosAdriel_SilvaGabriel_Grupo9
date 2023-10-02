@@ -1,5 +1,6 @@
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
@@ -28,16 +29,50 @@ class Avion {
         }
     }
 
-    public void comprarPasaje(int asiento) {
+    public void comprarPasaje(int asiento) throws IOException {
+        String nombre, rut;
+        int telefono, intVip;
+        float descuento = 1;
+        boolean vip = false, check = false;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
         if (asiento > 0 && asiento < 43) {
             if (!asientosPasajeros[asiento].isEmpty()) {
                 System.out.println("Asiento no disponible");
             } else if (!asientosPasajeros[asiento].isVip()) {
                 System.out.println("Asiento Premium VIP disponible");
-
+                descuento = 0.85F;
             } else
                 System.out.println("Asiento Economy disponible");
-            System.out.println("Asiento disponible");
+            System.out.print("\nIngrese el nombre: ");
+            nombre = br.readLine();
+            System.out.print("\nIngrese el rut: ");
+            rut = br.readLine();
+            System.out.print("\nIngrese el telefono (ej: 912345678): ");
+            telefono = Integer.parseInt(br.readLine());
+            do {
+                System.out.println("Usuario VIP:");
+                System.out.println("1.- Si");
+                System.out.println("2.- No");
+                System.out.print("Ingrese su opción: ");
+                intVip = Integer.parseInt(br.readLine());
+                switch (intVip) {
+                    case 1:
+                        check = true;
+                        vip = true;
+                        break;
+                    case 2:
+                        check = true;
+                        vip = false;
+                        break;
+                    default:
+                        System.out.println("Respuesta inválida");
+                        break;
+                }
+            } while (!check);
+            
+            asientosPasajeros[asiento].pasajero = new Pasajero(nombre, rut, telefono, vip);
+            System.out.println("Vuelo comprado con exito.");
         }
     }
 
