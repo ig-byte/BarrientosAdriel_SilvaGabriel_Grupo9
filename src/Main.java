@@ -17,6 +17,10 @@ public class Main {
         System.out.println("asda");
         System.out.println("Holaa, intento 2");
         System.out.println();
+
+        Pasajero p1 = new Pasajero(null, 0, 0, false);
+
+        System.out.println(p1.toString());
         // TODO code application logic here
 
         /*
